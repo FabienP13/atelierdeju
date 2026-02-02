@@ -1,0 +1,83 @@
+<!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
+<div class="fixed top-0 left-0 w-full h-1 bg-brown2 z-60"></div>
+<nav
+  class="nav  fixed top-1 left-0 w-full z-50 bg-white py-6 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0  after:h-px transition-colors duration-300 transition-discrete text-white rounded-b-xl sm:rounded-none ">
+  <div class="px-2 sm:px-6 lg:px-8">
+    <div class="relative  h-22 ">
+      <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" command="--toggle" commandfor="mobile-menu"
+          class="relative inline-flex items-center justify-center rounded-md p-2 aria-expanded:text-brown2 text-white hover:bg-white/5 hover:text-brown2 focus:outline-2 focus:-outline-offset-1 focus:outline-brown2">
+          <span class="absolute -inset-0.5 "></span>
+          <span class="sr-only">Open main menu</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
+            aria-hidden="true" class="size-8 in-aria-expanded:hidden">
+            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
+            aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
+            <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex items-center justify-center lg:justify-between ">
+        <div class="lg:pl-8">
+          <a href="/">
+            <img src="/images/logo-camel.webp" alt="Logo Atelier de Ju" class=" h-22 md:h-22 w-auto " />
+          </a>
+        </div>
+        <div class="hidden sm:block ">
+          <div class="flex space-x-4 md:space-x-1 items-center align-start">
+            <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+            <a href="/prestations/renovation-cuir.html" class="relative text-black px-3 py-2 text-base lg:text-xl font-medium after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-brown2/70 after:transition-all after:duration-300 hover:after:w-full nav-link transition-all duration-300 ease-out
+         hover:-translate-y-0.5">Rénovation Cuir
+        </a>
+            <a href="/prestations/renovation-carrosserie.html" class="relative text-black px-3 py-2 text-base lg:text-xl  font-medium after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-brown2/70 after:transition-all after:duration-300 hover:after:w-full nav-link transition-all duration-300 ease-out
+         hover:-translate-y-0.5">Rénovation Carrosserie
+        </a>
+            <a href="/prestations/nettoyage-vehicule.html" class="relative text-black px-3 py-2 text-base lg:text-xl font-medium after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-brown2/70 after:transition-all after:duration-300 hover:after:w-full nav-link transition-all duration-300 ease-out
+         hover:-translate-y-0.5">
+         Nettoyage Véhicule
+        </a>
+
+          </div>
+        </div>
+        <div class="hidden sm:block">
+          <div class="flex space-x-4  items-center">
+            <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+            <a href="/contact.html" class="relative px-3 py-2 text-base lg:text-xl text-white font-medium rounded-xl bg-brown2 nav-link hover:text-brown2 hover:bg-white hover:border  hover:border-brown2 transition-all duration-450 ease-out
+         hover:-translate-y-0.75
+         hover:shadow-xl ">Contactez-moi</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <el-disclosure id="mobile-menu" hidden class="block sm:hidden mt-5 ">
+    <div class="space-y-1 px-2 pt-2 pb-3">
+      <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+      <a href="/prestations/renovation-cuir.html"
+        class="block rounded-md px-3 py-2 text-base font-medium focus:-outline-offset-1 focus:outline-brown2">Rénovation
+        Cuir</a>
+      <a href="/prestations/renovation-carrosserie.html"
+        class="block rounded-md px-3 py-2 text-base font-medium focus:-outline-offset-1 focus:outline-brown2">Rénovation
+        Carrosserie</a>
+      <a href="/prestations/nettoyage-vehicule.html"
+        class="block rounded-md px-3 py-2 text-base font-medium focus:-outline-offset-1 focus:outline-brown2">Nettoyage
+        Véhicule</a>
+      <div class="flex justify-center pt-3">
+        <a href="/contact.html" class="inline-flex items-center justify-center
+           px-6 py-2
+           text-base lg:text-lg text-white font-medium
+           rounded-xl
+            bg-brown2
+           focus:-outline-offset-1 focus:outline-brown2">
+          Contactez-moi
+        </a>
+
+      </div>
+  </el-disclosure>
+</nav>
