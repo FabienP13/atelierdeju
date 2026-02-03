@@ -10,6 +10,8 @@
   --color-brown2: #A27035  ;
   --color-black: #070707;
   --color-gris: rgb(201, 201, 201);
+  --color-success: #00CA4B;
+  --color-error: #E03434;
 
 }
 @font-face {
@@ -83,6 +85,23 @@
   font-display: swap;
 }
 
+/* Chrome / Edge / Safari */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  -webkit-text-fill-color: #1f2937; /* text-gray-800 */
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Firefox */
+input:-moz-autofill,
+textarea:-moz-autofill {
+  box-shadow: 0 0 0px 1000px white inset;
+  -moz-text-fill-color: #1f2937;
+}
+
 
 body {
   height: 100%;
@@ -117,7 +136,7 @@ body {
 /** PAGE ACCUEIL **/
 
 .nav.scrolled {
-  @apply bg-gris text-black shadow-md;
+  @apply bg-white text-black shadow-md ;
 }
 
 .nav.scrolled svg {

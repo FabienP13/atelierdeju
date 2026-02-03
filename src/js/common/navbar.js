@@ -32,8 +32,12 @@ export async function initNavbar() {
   function setActiveNavLink() {
     const currentPath = window.location.pathname
     document.querySelectorAll('.nav-link').forEach(link => {
-      const linkPath = new URL(link.href).pathname
-      link.classList.toggle('active', linkPath === currentPath)
+      
+      if(currentPath != '/contact.html'){
+        const linkPath = new URL(link.href).pathname
+        link.classList.toggle('active', linkPath === currentPath)
+      }
+      
     })
   }
 
