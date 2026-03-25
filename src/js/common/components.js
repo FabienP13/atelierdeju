@@ -1,10 +1,11 @@
 export async function loadComponent(selector, path) {
-  const target = document.querySelector(selector)
-  if (!target) return
+  const targets = document.querySelectorAll(selector)
+  if (!targets.length) return
 
   const response = await fetch(path)
-  target.innerHTML = await response.text()
+  const html = await response.text()
+
+  targets.forEach(target => {
+    target.innerHTML = html
+  })
 }
-
-
-

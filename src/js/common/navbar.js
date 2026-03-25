@@ -26,7 +26,7 @@ export async function initNavbar() {
 
   function offsetMain() {
     const navHeight = nav.offsetHeight
-    main.style.paddingTop = `${navHeight + 5}px`
+    main.style.paddingTop = `${navHeight + 4}px`
   }
 
   function setActiveNavLink() {

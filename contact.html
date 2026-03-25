@@ -17,28 +17,38 @@
 
   <section id="formulaire" class="w-full flex justify-center">
     <form id="contact"
-      class="flex flex-col  items-center text-sm text-slate-800 w-full max-md:max-w-md max-w-xl p-10 rounded-2xl mt-18 mb-5 bg-white  max-sm:px-4 max-md:mx-3">
+      class="flex flex-col  items-center text-sm text-zinc-900 w-full max-md:max-w-md max-w-xl p-10 rounded-2xl mt-18 bg-white  max-sm:px-4 max-md:mx-3">
+
       <div id="alerte_succes"
-        class="hidden alert bg-success/15 text-success alert-success flex justify-center items-center gap-4 mb-5" role="alert">
+        class="hidden alert bg-success/15 text-success alert-success flex justify-center items-center gap-4 mb-5"
+        role="alert">
         <span class="icon-[tabler--circle-check] shrink-0 size-6"></span>
         <h6 class="text-md font-semibold"> </h6>
       </div>
       <div id="alerte"
-        class=" hidden alert bg-error/15 text-error alert-error flex justify-center items-center gap-4 mb-5" role="alert">
+        class="hidden alert bg-error/15 text-error alert-error flex justify-center items-center gap-4 mb-5"
+        role="alert">
         <span class="icon-[tabler--alert-triangle] shrink-0 size-6"></span>
-        <h6 class="text-md font-semibold"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, illum. Qui, veritatis mollitia molestiae earum repellendus at. Autem culpa recusandae, quis iusto nulla, iste maxime sequi harum dolore nostrum fuga? </h6>
+        <h6 class="text-md font-semibold"> </h6>
       </div>
-      <p class="text-xl bg-brown2/20 text-brown2 font-medium px-3 py-1 rounded-full">Me contacter</p>
+      <div class="hidden">
+        <label for="website">Website</label>
+        <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
+
+      </div>
+      <!-- Timestamp -->
+      <input type="hidden" name="form_time" id="form_time">
+      <p class="text-xl bg-brown2/20 text-brown2 font-medium px-3 py-1 rounded-full">Nous contacter</p>
       <h1 class="text-4xl font-bold py-4 text-center">Un besoin ? Une question ?</h1>
-      <p class="max-md:text-sm text-gray-500 pb-10 text-center">
-        Ou contacte moi simplement à l'adresse <a href="mailto:contact@atelierdejus.fr"
+      <p class="max-md:text-sm text-zinc-800 pb-10 text-center">
+        Ou contactez-nous simplement à l'adresse <a href="mailto:contact@atelierdejus.fr"
           class="text-brown2 hover:underline">contact@atelierdejus.fr</a>
       </p>
 
       <div class=" max-w-96 w-full px-4" id="bordure">
         <label for="nom" class="font-medium">Nom*</label>
         <div
-          class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2 focus-within:ring-brown2 transition-all overflow-hidden">
+          class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2 focus-within:ring-brown2 focus-within:border-none transition-all overflow-hidden">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M18.311 16.406a9.64 9.64 0 0 0-4.748-4.158 5.938 5.938 0 1 0-7.125 0 9.64 9.64 0 0 0-4.749 4.158.937.937 0 1 0 1.623.938c1.416-2.447 3.916-3.906 6.688-3.906 2.773 0 5.273 1.46 6.689 3.906a.938.938 0 0 0 1.622-.938M5.938 7.5a4.063 4.063 0 1 1 8.125 0 4.063 4.063 0 0 1-8.125 0"
@@ -46,12 +56,12 @@
           </svg>
           <input type="text" name="nom" class="h-full px-2 w-full outline-none bg-transparent " placeholder="Votre nom"
             required>
-          </div>
-          <p id="error-nom" class="text-red-600 text-xs mt-1 hidden"></p>
+        </div>
+        <p id="error-nom" class="text-red-600 text-xs mt-1 hidden"></p>
 
         <label for="telephone" class="font-medium">Téléphone*</label>
         <div
-          class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2 focus-within:ring-brown2 transition-all overflow-hidden">
+          class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2 focus-within:ring-brown2 focus-within:border-none transition-all overflow-hidden">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 text-black transition-colors"
             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path
@@ -64,7 +74,7 @@
 
         <label for="email" class="font-medium mt-4">Adresse mail*</label>
         <div
-          class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2   focus-within:ring-brown2 transition-all overflow-hidden">
+          class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2   focus-within:ring-brown2 focus-within:border-none transition-all overflow-hidden">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M17.5 3.438h-15a.937.937 0 0 0-.937.937V15a1.563 1.563 0 0 0 1.562 1.563h13.75A1.563 1.563 0 0 0 18.438 15V4.375a.94.94 0 0 0-.938-.937m-2.41 1.874L10 9.979 4.91 5.313zM3.438 14.688v-8.18l5.928 5.434a.937.937 0 0 0 1.268 0l5.929-5.435v8.182z"
@@ -74,12 +84,12 @@
             placeholder="Votre adresse mail" required>
         </div>
         <div>
-            <label for="message" class="font-medium mt-4">Message*</label>
-        <textarea rows="4" id="message" name="message"
-          class="w-full mt-2 p-2 bg-transparent border border-slate-300 rounded-lg resize-none outline-none focus:ring-2  focus-within:ring-brown2 transition-all"
-          placeholder="Rédigez votre message" required></textarea>
+          <label for="message" class="font-medium mt-4">Message*</label>
+          <textarea rows="4" id="message" name="message"
+            class="w-full mt-2 p-2 bg-transparent border border-slate-300 rounded-lg resize-none outline-none focus:ring-2  focus-within:ring-brown2 focus-within:border-none transition-all"
+            placeholder="Rédigez votre message" required></textarea>
         </div>
-        
+
 
         <button type="submit" class="flex items-center justify-center gap-1 mt-5 bg-brown2/92 hover:bg-brown2 text-white py-2.5 w-full rounded-full transition-all duration-250 ease-out
          hover:-translate-y-0.75
@@ -94,6 +104,8 @@
       </div>
     </form>
   </section>
+
+  <section id="prestations" class="pb-5 w-full bg-white"></section>
 
   <section id="footer"></section>
   <script type="module" src="/src/js/contact.js"></script>

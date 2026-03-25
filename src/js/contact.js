@@ -1,5 +1,6 @@
 import { initNavbar } from './common/navbar.js'
 import { initFooter } from './common/footer.js'
+import { initPrestations } from './common/prestations.js'
 
 const formulaire = document.querySelector("form#contact")
 const inputNom = formulaire.querySelector('input[name="nom"]');
@@ -11,6 +12,7 @@ let divAlert = document.querySelector('#alerte')
 let h6_alert = document.querySelector('#alerte h6')
 let divAlertSuccess = document.querySelector('#alerte_succes')
 let h6_alert_success = document.querySelector('#alerte_succes h6')
+
 h6_alert.setAttribute('style', 'white-space: pre-line;text-align:left;margin-bottom: 0px;');
 h6_alert.textContent = ''
 
@@ -19,7 +21,10 @@ h6_alert_success.textContent = ''
 
 await initNavbar()
 await initFooter()
+await initPrestations()
 
+const formTimeInput = formulaire.querySelector('#form_time');
+formTimeInput.value = Math.floor(Date.now() / 1000);
 
 formulaire.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -35,7 +40,11 @@ formulaire.addEventListener('submit', async (e) => {
     const isEmailValid = validateEmail();
     const isMessageValid = validateMessage();
 
-    if (!isNomValid || !isTelephoneValid || !isEmailValid || !isMessageValid) return;
+    if (!isNomValid || !isTelephoneValid || !isEmailValid || !isMessageValid) {
+    // 👉 scroll vers l’alerte erreur
+    scrollToElement(divAlert);
+    return;
+}
 
 
     try {
@@ -45,15 +54,18 @@ formulaire.addEventListener('submit', async (e) => {
         });
 
         const data = await response.json();
-
+        console.log(data)
         if (data.success) {
             //TODO : faire remonter la page en haut (pour voir l'alerte)
+            scrollToElement(divAlertSuccess);
             divAlertSuccess.classList.remove('hidden')
             h6_alert_success.textContent = 'Message envoyé ✅';
             form.reset();
         } else {
             divAlert.classList.remove('hidden')
             h6_alert.textContent = 'Erreur : ' + data.error;
+
+            scrollToElement(divAlert);
         }
 
         // document.querySelector("#bordure").classList.remove('border border-slate-300')
@@ -69,7 +81,7 @@ function validateNom() {
     const regexNom = /^[\p{L}]+(?:[\s-][\p{L}]+)*$/u;
 
     if (!value) {
-        showError('Le nom est requis');
+        showError(inputNom, 'Le nom est requis');
         return false;
     }
 
@@ -169,6 +181,7 @@ function showError(element, message) {
     const id = element.getAttribute('id')
     h6_alert.textContent += message + '.\n';
     divAlert.classList.remove('hidden');
+
     if (id !== 'message') {
         let div = element.closest('div')
         div.classList.add(
@@ -187,10 +200,7 @@ function showError(element, message) {
 }
 
 function hideError(element) {
-    const id = element.getAttribute('id')
-
-    h6_alert.textContent = '';
-    divAlert.classList.add('hidden');
+    const id = element.getAttribute('id');
 
     if (id !== 'message') {
         const div = element.closest('div');
@@ -199,16 +209,25 @@ function hideError(element) {
             'ring-red-600',
             'border-red-600'
         );
-        div.classList.add(
-            'border',
-            'border-slate-300'
-        );
+        div.classList.add('border', 'border-slate-300');
     } else {
-        element.classList.remove('ring-1',
+        element.classList.remove(
+            'ring-1',
             'ring-red-600',
-            'border-red-600')
-        element.classList.add('border',
-            'border-slate-300')
+            'border-red-600'
+        );
+        element.classList.add('border', 'border-slate-300');
     }
+}
 
+function scrollToElement(element) {
+    const navbar = document.querySelector('#navbar');
+    const navbarHeight = navbar ? navbar.offsetHeight : 0;
+
+    const elementTop = element.getBoundingClientRect().top + window.scrollY;
+
+    window.scrollTo({
+        top: elementTop - navbarHeight - 186,
+        behavior: 'smooth'
+    });
 }

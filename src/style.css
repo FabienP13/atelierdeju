@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "tailwindcss-intersect";
+@import "tailwindcss-animated";
 @plugin "flyonui";
 @import "../node_modules/flyonui/variants.css"; /* Require only if you want to use FlyonUI JS component */
 @source "../node_modules/flyonui/index.js"; 
@@ -9,6 +11,7 @@
   --color-brown1: #9C7132;
   --color-brown2: #A27035  ;
   --color-black: #070707;
+  --color-test:#0D1229;
   --color-gris: rgb(201, 201, 201);
   --color-success: #00CA4B;
   --color-error: #E03434;
@@ -115,7 +118,7 @@ body {
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: rgb(201, 201, 201);
+  background-color: white;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -133,6 +136,8 @@ body {
   width: 100%;
 }
 
+
+
 /** PAGE ACCUEIL **/
 
 .nav.scrolled {
@@ -142,6 +147,8 @@ body {
 .nav.scrolled svg {
   @apply text-black;
 }
+
+
 
 /** FIN PAGE ACCUEIL */
 
