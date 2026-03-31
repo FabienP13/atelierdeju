@@ -9,7 +9,7 @@
 @theme {
   --color-brown: #734609;
   --color-brown1: #9C7132;
-  --color-brown2: #A27035  ;
+  --color-brown2: #A27035;
   --color-black: #070707;
   --color-test:#0D1229;
   --color-gris: rgb(201, 201, 201);
@@ -172,6 +172,7 @@ body {
     background-color: #f9f9f9;
   }
 }
+
 
 
 /** FOOTER **/

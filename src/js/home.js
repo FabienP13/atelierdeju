@@ -8,10 +8,12 @@ import { initRealisations } from './realisations.js'
 import { InitIntroCuir } from './intro-renovation-cuir.js'
 import { InitIntroCarrosserie } from './intro-renovation-carrosserie.js'
 import { InitIntroNettoyage } from './intro-nettoyage-vehicule.js'
+import { InitServicesNettoyage } from './common/services.js'
 
 await initNavbar()
 await initFooter()
 await initPrestations()
+await InitServicesNettoyage()
 await initRealisations()
 await InitIntroCuir()
 await InitIntroCarrosserie()

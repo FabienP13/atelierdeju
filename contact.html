@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8" />
@@ -15,7 +15,7 @@
     <!-- hover:bg-white hover:text-brown2 hover:border hover:border-brown2 -->
   </section>
 
-  <section id="formulaire" class="w-full flex justify-center">
+  <section id="formulaire" class="w-full flex justify-center scroll-mt-10">
     <form id="contact"
       class="flex flex-col  items-center text-sm text-zinc-900 w-full max-md:max-w-md max-w-xl p-10 rounded-2xl mt-18 bg-white  max-sm:px-4 max-md:mx-3">
 
@@ -40,7 +40,7 @@
       <input type="hidden" name="form_time" id="form_time">
       <p class="text-xl bg-brown2/20 text-brown2 font-medium px-3 py-1 rounded-full">Nous contacter</p>
       <h1 class="text-4xl font-bold py-4 text-center">Un besoin ? Une question ?</h1>
-      <p class="max-md:text-sm text-zinc-800 pb-10 text-center">
+      <p class="max-md:text-sm text-zinc-800 pb-4 text-center">
         Ou contactez-nous simplement à l'adresse <a href="mailto:contact@atelierdejus.fr"
           class="text-brown2 hover:underline">contact@atelierdejus.fr</a>
       </p>
@@ -106,7 +106,26 @@
   </section>
 
   <section id="prestations" class="pb-5 w-full bg-white"></section>
+  <section class="btnDevisGratuit w-fit mx-auto pb-10">
+    <a href="#formulaire"
+    class="group inline-flex items-center w-fit mt-3 px-3 py-1 text-base lg:text-lg text-white font-medium rounded-xl bg-brown2 overflow-hidden ">
 
+    <!-- Texte -->
+    <span class="transition-transform duration-500 ease-out group-hover:-translate-x-1.5 ">
+        Demandez votre devis <b>GRATUIT</b>
+    </span>
+
+    <!-- Chevron -->
+    <span class="ml-0 w-0 overflow-hidden
+                 transition-all duration-300 ease-out
+                 group-hover:ml-1 group-hover:w-5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z" />
+        </svg>
+    </span>
+
+</a>
+  </section> 
   <section id="footer"></section>
   <script type="module" src="/src/js/contact.js"></script>
   <script src="/node_modules/flyonui/flyonui.js"></script>

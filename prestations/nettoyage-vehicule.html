@@ -1,29 +1,32 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/images/logo-camel-v2.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/style.css" />
-    <title>Mes prestations</title>
+    <title>Nettoyage véhicules</title>
   </head>
 
   <body>
-    <section
-      id="header"
-      class=""
-    >
+    <section id="header" class="">
       <header id="navbar"></header>
-
-      <h1 class="text-white">
-       Mes prestations Lavage automobiles
-      </h1>
-
-      <div class="min-h-lvh">
-        <p></p>
+      <div
+      class="relative w-full h-70 lg:h-100  bg-[url(/images/voiture-ancienne-beige.webp)] bg-cover bg-position-[0%_77%] max-sm:bg-center bg-black/50 bg-blend-soft-light">
+      <!-- <img src="/images/tableau-de-bord-reduit.webp" alt="" class="w-full h-full object-cover object-center" /> -->
+      <div class="absolute  inset-0 flex items-center justify-center ">
+        <h1
+          class="leading-12 md:leading-15 lg:leading-20 text-white text-3xl lg:text-4xl xl:text-5xl text-shadow-lg/30 font-extrabold text-center max-w-lg lg:max-w-2xl xl:max-w-4xl">
+            Lavage automobile sans eau — Éco-responsable & Professionnel       
+        </h1>
       </div>
+    </div>
     </section>
-
+    <section id="intro_nettoyage" class="max-w-full  text-black pt-10 xl:pt-5 2xl:pt-0"></section>
+    <section id="services" class="w-full bg-gris py-14 px-5 md:px-15 xl:px-40 mt-10"></section>
+    <section id="offres_nettoyage" class="w-full text-black px-10 pt-6 scroll-mt-25"></section>
+    <section id="realisation-nettoyage" class="mb-5"></section>
+    <section class="btnQuestion flex justify-center mx-auto gap-4 pb-10"></section>
     <section id="footer"></section>
     <script type="module" src="/src/js/nettoyage-vehicule.js"></script>
   </body>

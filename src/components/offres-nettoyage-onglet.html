@@ -1,0 +1,124 @@
+<!-- forfaits-nettoyage.html -->
+<article class="w-full text-black px-5 md:px-10 pt-10 pb-16">
+
+    <h2 class="w-fit text-brown2 mx-auto text-xl md:text-3xl font-medium px-3 py-3 rounded-3xl bg-brown2/20 mb-10 text-center">
+        Nos forfaits
+    </h2>
+
+    <!-- Niveau 1 : Type de véhicule -->
+    <div class="flex justify-center mb-8">
+        <div class="flex bg-brown2 p-1 rounded-full gap-1">
+            <button id="btn-citadine"
+                class="vehicule-btn px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200 bg-white text-black">
+                Citadine / Berline
+            </button>
+            <button id="btn-suv"
+                class="vehicule-btn px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200 text-white">
+                SUV / 4X4
+            </button>
+        </div>
+    </div>
+
+    <!-- Niveau 2 : Type de prestation -->
+    <div class="flex justify-center gap-8 mb-12 border-b border-white/10 pb-4 max-w-md mx-auto">
+        <button id="btn-interieur"
+            class="prestation-btn text-sm font-bold uppercase tracking-widest pb-2 border-b-2 border-brown2 text-brown2 transition-all duration-200">
+            Intérieur
+        </button>
+        <button id="btn-exterieur"
+            class="prestation-btn text-sm font-bold uppercase tracking-widest pb-2 border-b-2 border-transparent text-neutral-500 transition-all duration-200">
+            Extérieur
+        </button>
+        <button id="btn-complet"
+            class="prestation-btn text-sm font-bold uppercase tracking-widest pb-2 border-b-2 border-transparent text-neutral-500 transition-all duration-200">
+            Formule Complète
+        </button>
+    </div>
+
+    <!-- Cards -->
+    <div class="flex flex-col md:flex-row gap-8 max-w-[85%] mx-auto">
+
+        <!-- CARD EXPRESS -->
+        <div class="flex-1 bg-black/90 rounded-2xl p-8 flex flex-col gap-4 hover:shadow-[0_12px_20px_-2px_rgba(0,0,0,0.6),-8px_4px_15px_-8px_rgba(0,0,0,0.4),8px_4px_15px_-8px_rgba(0,0,0,0.4)] hover:shadow-brown2/50 hover:-translate-y-4 transition-all duration-200">
+            <p class="text-neutral-500 text-xs font-semibold uppercase tracking-widest">Forfait Express</p>
+            <h3 class="text-white text-3xl font-extrabold italic" id="express-title">EXPRESS Intérieur</h3>
+            <p class="text-neutral-400 text-base/7" id="express-desc">Pour un nettoyage rapide réalisé par un professionnel.</p>
+            <p class="text-white text-5xl font-extrabold" id="express-price">55 €</p>
+            <ul class="text-neutral-400 text-[15px]/7 space-y-1 list-none" id="express-items">
+                <li class="flex items-start gap-2"><span class="text-brown2">→</span> Vitres intérieures</li>
+                <li class="flex items-start gap-2"><span class="text-brown2">→</span> Dépoussiérage plastiques intérieurs</li>
+                <li class="flex items-start gap-2"><span class="text-brown2">→</span> Aspiration express habitacle/coffre</li>
+            </ul>
+            <section class="btnDevisGratuit flex flex-col gap-4 mt-auto pt-4"></section>
+        </div>
+
+        <!-- CARD VIP -->
+        <div class="relative flex-1 bg-black/90 rounded-2xl p-8 flex flex-col gap-4 hover:shadow-[0_12px_20px_-2px_rgba(0,0,0,0.6),-8px_4px_15px_-8px_rgba(0,0,0,0.4),8px_4px_15px_-8px_rgba(0,0,0,0.4)] hover:shadow-brown2/50 hover:-translate-y-4 transition-all duration-200">
+            <span class="absolute -top-4 right-6 bg-brown2 text-white text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full">
+                Le plus complet
+            </span>
+            <p class="text-neutral-500 text-xs font-semibold uppercase tracking-widest">Forfait VIP</p>
+            <h3 class="text-white text-3xl font-extrabold italic" id="vip-title">VIP Intérieur</h3>
+            <p class="text-neutral-400 text-base/7" id="vip-desc">Prestation complète et aboutie pour un résultat premium.</p>
+            <p class="text-white text-5xl font-extrabold" id="vip-price">80 €</p>
+            <ul class="text-neutral-400 text-[15px]/7 space-y-1 list-none" id="vip-items">
+                <li class="flex items-start gap-2"><span class="text-brown2">→</span> Vitres intérieures</li>
+                <li class="flex items-start gap-2"><span class="text-brown2">→</span> Dépoussiérage & décrassage plastiques/tableau de bord</li>
+                <li class="flex items-start gap-2"><span class="text-brown2">→</span> Aspiration en profondeur habitacle/coffre</li>
+                <li class="flex items-start gap-2"><span class="text-brown2">→</span> Nettoyage passages de portes</li>
+                <li class="flex items-start gap-2"><span class="text-brown2">→</span> Traitement anti-odeur/antibactérien</li>
+                <li class="flex items-start gap-2"><span class="text-brown2">→</span> Baume plastiques/cuir</li>
+            </ul>
+            <section class="btnDevisGratuit flex flex-col gap-4 mt-auto pt-4"></section>
+        </div>
+
+    </div>
+
+    <!-- Supplément + Options -->
+    <div class="mt-10  max-w-fit mx-auto flex flex-col gap-6">
+
+        <!-- Supplément -->
+        <div class="bg-black/90 rounded-2xl p-6 flex items-center gap-4">
+            <span class="w-2 h-10 rounded-full bg-brown2 shrink-0"></span>
+            <p class="text-neutral-300 text-base/7">
+                <span class="text-white font-semibold">Supplément véhicules très sales</span>
+                <span class="text-neutral-400"> (boue, poils d'animaux, gravier...) </span>
+                <span class="text-brown2 font-bold">+ 29 €</span>
+            </p>
+        </div>
+
+        <!-- Tableau options -->
+        <div class="bg-black/90 rounded-2xl p-6 overflow-x-auto">
+            <div class="rounded-2xl flex items-center gap-3">
+                <span class="w-2 h-10 rounded-full bg-brown2 shrink-0"></span>
+                <h3 class="text-white text-lg font-semibold">Options à la carte</h3>
+            </div>
+            
+            <table class="w-full text-sm text-neutral-300 mt-2">
+                <thead>
+                    <tr class="border-b border-brown2/30">
+                        <th class="text-left pb-3 text-brown2 font-semibold">Prestation</th>
+                        <th class="text-center pb-3 text-brown2 font-semibold">Citadines / Berlines</th>
+                        <th class="text-center pb-3 text-brown2 font-semibold px-5">SUV / Breaks / Monospace</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-white/5">
+                    <tr><td class="py-2">Shampooing 1 siège cuir + soin</td><td class="text-center">19 €</td><td class="text-center">19 €</td></tr>
+                    <tr><td class="py-2">Shampooing 1 siège tissu</td><td class="text-center">14,90 €</td><td class="text-center">14,90 €</td></tr>
+                    <tr><td class="py-2">Shampooing 1 tapis</td><td class="text-center">5 €</td><td class="text-center">5 €</td></tr>
+                    <tr><td class="py-2">Shampooing 1 panneau de portes</td><td class="text-center">12,90 €</td><td class="text-center">12,90 €</td></tr>
+                    <tr><td class="py-2">Shampooing coffre</td><td class="text-center">19 €</td><td class="text-center">19 €</td></tr>
+                    <tr><td class="py-2">Shampooing moquettes</td><td class="text-center">30 €</td><td class="text-center">30 €</td></tr>
+                    <tr><td class="py-2">Nettoyage plafonnier</td><td class="text-center">29 €</td><td class="text-center">29 €</td></tr>
+                    <tr><td class="py-2">Shampooing habitacle complet</td><td class="text-center">90 €</td><td class="text-center">120 €</td></tr>
+                    <tr><td class="py-2">Traitement antibactérien/odeur</td><td class="text-center">9 €</td><td class="text-center">9 €</td></tr>
+                    <tr><td class="py-2 font-semibold text-white">Désinfection OZONE</td><td class="text-center font-semibold text-white">65 €</td><td class="text-center font-semibold text-white">65 €</td></tr>
+                    <tr><td class="py-2 font-semibold text-white">Désinfection Aéro Diffusion <span class="text-brown2 text-xs ml-1">NOUVEAU</span></td><td class="text-center font-semibold text-white">35 €</td><td class="text-center font-semibold text-white">35 €</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</article>
+
