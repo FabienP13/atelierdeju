@@ -4,7 +4,7 @@ import { Observer } from 'tailwindcss-intersect';
 import { loadComponent } from '/src/js/common/components.js'
 
 export async function InitBoutonDevisSavoirPlus() {
-    await loadComponent('.btnDevis', '/src/components/boutonDevisSavoirPlus.html')
+    await loadComponent('.btnDevis', '/components/boutonDevisSavoirPlus.html')
     
     Observer.start();   
 

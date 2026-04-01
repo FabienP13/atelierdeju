@@ -14,7 +14,7 @@ export default defineConfig({
         mentionsLegales: resolve(__dirname, 'mentions-legales/index.html'),
         prestationCuir: resolve(__dirname, 'prestations/renovation-cuir/index.html'),
         prestationCarrosserie: resolve(__dirname, 'prestations/renovation-carrosserie-polish/index.html'),
-        prestationNettoyage: resolve(__dirname, 'prestations/nettoyage-vehicule/index.html'),
+        prestationNettoyage: resolve(__dirname, 'prestations/nettoyage-automobile/index.html'),
       }
     }
   }

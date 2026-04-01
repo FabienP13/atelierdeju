@@ -5,7 +5,7 @@ import { loadComponent } from '/src/js/common/components.js'
 
 export async function InitBoutonQuestion() {
     
-    await loadComponent('.btnQuestion', '/src/components/boutonQuestion.html')
+    await loadComponent('.btnQuestion', '/components/boutonQuestion.html')
     
     Observer.start();   
 

@@ -5,7 +5,7 @@ import { loadComponent } from '/src/js/common/components.js'
 
 
 export async function InitIntroCarrosserie() {
-    await loadComponent('#intro-renovation-carrosserie', '/src/components/intro-renovation-carrosserie.html')
+    await loadComponent('#intro-renovation-carrosserie', '/components/intro-renovation-carrosserie.html')
     
     Observer.start();   
 

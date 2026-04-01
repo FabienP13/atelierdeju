@@ -173,7 +173,14 @@ body {
   }
 }
 
-
+@media (max-width: 767px) {
+  .no-anim-mobile {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
 
 /** FOOTER **/
 footer a:hover{

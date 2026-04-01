@@ -2,7 +2,7 @@ import '@tailwindplus/elements'
 import { loadComponent } from '/src/js/common/components.js'
 
 export async function initNavbar() {
-  await loadComponent('#navbar', '/src/components/navbar.html')
+  await loadComponent('#navbar', '/components/navbar.html')
 
   const main = document.querySelector('#header')
   const nav = document.querySelector('.nav')
