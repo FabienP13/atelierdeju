@@ -10,10 +10,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        contact: resolve(__dirname, 'contact.html'),
-        prestationCuir: resolve(__dirname, 'prestations/renovation-cuir.html'),
-        prestationCarrosserie: resolve(__dirname, 'prestations/renovation-carrosserie.html'),
-        prestationNettoyage: resolve(__dirname, 'prestations/nettoyage-vehicule.html'),
+        contact: resolve(__dirname, 'contact/index.html'),
+        mentionsLegales: resolve(__dirname, 'mentions-legales/index.html'),
+        prestationCuir: resolve(__dirname, 'prestations/renovation-cuir/index.html'),
+        prestationCarrosserie: resolve(__dirname, 'prestations/renovation-carrosserie-polish/index.html'),
+        prestationNettoyage: resolve(__dirname, 'prestations/nettoyage-vehicule/index.html'),
       }
     }
   }
