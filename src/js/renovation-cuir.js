@@ -13,6 +13,7 @@ await InitRealisationCuir()
 await InitIntroCuir()
 await InitPourquoiAtelierDeJu()
 await InitBoutonDevisGratuit()
+await InitLogoEntrepriseCuir()
 initDiffSlider()
 
 export async function InitRealisationCuir() {
@@ -28,6 +29,12 @@ export async function InitIntroCuir() {
 }
 export async function InitPourquoiAtelierDeJu() {
     await loadComponent('#pourquoi-atelier-de-ju', '/components/pourquoi-atelier-de-ju.html')
+    
+    Observer.start();   
+}
+
+export async function InitLogoEntrepriseCuir() {
+    await loadComponent('#logoEntrepriseCuir', '/components/logo-entreprise-cuir.html')
     
     Observer.start();   
 }

@@ -1,25 +1,32 @@
 export function initDiffSlider() {
-  document.querySelectorAll('.diff').forEach(diff => {
-    const input = diff.querySelector('input[type="range"]')
-    if (!input) return
+  document.querySelectorAll('.diff').forEach(diffElement => {
+    const resizer = diffElement.querySelector('.diff-resizer')
+    if (!resizer) return
 
-    diff.addEventListener('touchmove', (e) => {
+    let isDragging = false
+
+    function setPosition(clientX) {
+      const rect = diffElement.getBoundingClientRect()
+      const x = clientX - rect.left
+      const percent = Math.min(Math.max((x / rect.width) * 100, 0), 100)
+      // Simuler un drag natif sur le resizer
+      const nativeWidth = (percent / 100) * rect.width
+      resizer.style.width = nativeWidth + 'px'
+    }
+
+    diffElement.addEventListener('touchstart', (e) => {
+      isDragging = true
+      setPosition(e.touches[0].clientX)
+    }, { passive: false })
+
+    diffElement.addEventListener('touchmove', (e) => {
+      if (!isDragging) return
       e.preventDefault()
-      const touch = e.touches[0]
-      const rect = diff.getBoundingClientRect()
-      const x = touch.clientX - rect.left
-      const percent = Math.min(Math.max((x / rect.width) * 100, 0), 100)
-      input.value = percent
-      input.dispatchEvent(new Event('input'))
+      setPosition(e.touches[0].clientX)
     }, { passive: false })
 
-    diff.addEventListener('touchstart', (e) => {
-      const touch = e.touches[0]
-      const rect = diff.getBoundingClientRect()
-      const x = touch.clientX - rect.left
-      const percent = Math.min(Math.max((x / rect.width) * 100, 0), 100)
-      input.value = percent
-      input.dispatchEvent(new Event('input'))
-    }, { passive: false })
+    diffElement.addEventListener('touchend', () => {
+      isDragging = false
+    })
   })
 }

@@ -14,6 +14,7 @@ await InitOffresNettoyage()
 await InitRealisationsNettoyage()
 await initFooter()
 await InitBoutonQuestion()
+await InitLogoEntrepriseNettoyage()
 
 
 export async function InitIntroductionNettoyage() {
@@ -30,6 +31,12 @@ export async function InitOffresNettoyage() {
 
 export async function InitRealisationsNettoyage() {
     await loadComponent('#realisation-nettoyage', '/components/realisations-nettoyage.html')
+    
+    Observer.start();   
+}
+
+export async function InitLogoEntrepriseNettoyage() {
+    await loadComponent('#logoEntrepriseNettoyage', '/components/logo-entreprise-nettoyage.html')
     
     Observer.start();   
 }
