@@ -27,125 +27,128 @@
 </head>
 
 <body>
-  <section id="header" class=" ">
-    <header id="navbar"></header>
-    <!-- hover:bg-white hover:text-brown2 hover:border hover:border-brown2 -->
-  </section>
+  <main>
+    <section id="header" class=" ">
+      <header id="navbar"></header>
+      <!-- hover:bg-white hover:text-brown2 hover:border hover:border-brown2 -->
+    </section>
 
-  <section id="formulaire" class="w-full flex justify-center scroll-mt-10">
-    <form id="contact"
-      class="flex flex-col  items-center text-sm text-zinc-900 w-full max-md:max-w-md max-w-xl p-10 rounded-2xl mt-18 bg-white  max-sm:px-4 max-md:mx-3">
+    <section id="formulaire" class="w-full flex justify-center scroll-mt-10">
+      <form id="contact"
+        class="flex flex-col  items-center text-sm text-zinc-900 w-full max-md:max-w-md max-w-xl p-10 rounded-2xl mt-18 bg-white  max-sm:px-4 max-md:mx-3">
 
-      <div id="alerte_succes"
-        class="hidden alert bg-success/15 text-success alert-success flex justify-center items-center gap-4 mb-5"
-        role="alert">
-        <span class="icon-[tabler--circle-check] shrink-0 size-6"></span>
-        <h6 class="text-md font-semibold"> </h6>
-      </div>
-      <div id="alerte"
-        class="hidden alert bg-error/15 text-error alert-error flex justify-center items-center gap-4 mb-5"
-        role="alert">
-        <span class="icon-[tabler--alert-triangle] shrink-0 size-6"></span>
-        <h6 class="text-md font-semibold"> </h6>
-      </div>
-      <div class="hidden">
-        <label for="website">Website</label>
-        <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
-
-      </div>
-      <!-- Timestamp -->
-      <input type="hidden" name="form_time" id="form_time">
-      <p class="text-xl bg-brown2/20 text-brown2 font-medium px-3 py-1 rounded-full">Nous contacter</p>
-      <h1 class="text-4xl font-bold py-4 text-center">Un besoin ? Une question ?</h1>
-      <p class="max-md:text-sm text-zinc-800 pb-4 text-center">
-        Ou contactez-nous simplement à l'adresse <a href="mailto:contact@atelierdeju.fr"
-          class="text-brown2 hover:underline">contact@atelierdeju.fr</a>
-      </p>
-
-      <div class=" max-w-96 w-full px-4" id="bordure">
-        <label for="nom" class="font-medium">Nom*</label>
-        <div
-          class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2 focus-within:ring-brown2 focus-within:border-none transition-all overflow-hidden">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M18.311 16.406a9.64 9.64 0 0 0-4.748-4.158 5.938 5.938 0 1 0-7.125 0 9.64 9.64 0 0 0-4.749 4.158.937.937 0 1 0 1.623.938c1.416-2.447 3.916-3.906 6.688-3.906 2.773 0 5.273 1.46 6.689 3.906a.938.938 0 0 0 1.622-.938M5.938 7.5a4.063 4.063 0 1 1 8.125 0 4.063 4.063 0 0 1-8.125 0"
-              fill="currentColor" />
-          </svg>
-          <input type="text" name="nom" class="h-full px-2 w-full outline-none bg-transparent " placeholder="Votre nom"
-            required>
+        <div id="alerte_succes"
+          class="hidden alert bg-success/15 text-success alert-success flex justify-center items-center gap-4 mb-5"
+          role="alert">
+          <span class="icon-[tabler--circle-check] shrink-0 size-6"></span>
+          <h6 class="text-md font-semibold"> </h6>
         </div>
-        <p id="error-nom" class="text-red-600 text-xs mt-1 hidden"></p>
-
-        <label for="telephone" class="font-medium">Téléphone*</label>
-        <div
-          class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2 focus-within:ring-brown2 focus-within:border-none transition-all overflow-hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 text-black transition-colors"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path
-              d="M3 5.25C3 4.007 4.007 3 5.25 3h2.086c.86 0 1.61.586 1.818 1.42l.73 2.92a1.875 1.875 0 0 1-1.054 2.176l-1.26.63a11.036 11.036 0 0 0 5.11 5.11l.63-1.26a1.875 1.875 0 0 1 2.176-1.054l2.92.73c.834.209 1.42.958 1.42 1.818V18c0 1.243-1.007 2.25-2.25 2.25h-.75C9.022 20.25 3 14.978 3 8.25v-3Z" />
-          </svg>
-
-          <input type="text" name="telephone" class="h-full px-2 w-full outline-none bg-transparent"
-            placeholder="Votre numéro" required>
+        <div id="alerte"
+          class="hidden alert bg-error/15 text-error alert-error flex justify-center items-center gap-4 mb-5"
+          role="alert">
+          <span class="icon-[tabler--alert-triangle] shrink-0 size-6"></span>
+          <h6 class="text-md font-semibold"> </h6>
         </div>
+        <div class="hidden">
+          <label for="website">Website</label>
+          <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
 
-        <label for="email" class="font-medium mt-4">Adresse mail*</label>
-        <div
-          class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2   focus-within:ring-brown2 focus-within:border-none transition-all overflow-hidden">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M17.5 3.438h-15a.937.937 0 0 0-.937.937V15a1.563 1.563 0 0 0 1.562 1.563h13.75A1.563 1.563 0 0 0 18.438 15V4.375a.94.94 0 0 0-.938-.937m-2.41 1.874L10 9.979 4.91 5.313zM3.438 14.688v-8.18l5.928 5.434a.937.937 0 0 0 1.268 0l5.929-5.435v8.182z"
-              fill="currentColor" />
-          </svg>
-          <input type="email" name="email" class="h-full px-2 w-full outline-none bg-transparent"
-            placeholder="Votre adresse mail" required>
         </div>
-        <div>
-          <label for="message" class="font-medium mt-4">Message*</label>
-          <textarea rows="4" id="message" name="message"
-            class="w-full mt-2 p-2 bg-transparent border border-slate-300 rounded-lg resize-none outline-none focus:ring-2  focus-within:ring-brown2 focus-within:border-none transition-all"
-            placeholder="Rédigez votre message" required></textarea>
-        </div>
+        <!-- Timestamp -->
+        <input type="hidden" name="form_time" id="form_time">
+        <p class="text-xl bg-brown2/20 text-brown2 font-medium px-3 py-1 rounded-full">Nous contacter</p>
+        <h1 class="text-4xl font-bold py-4 text-center">Un besoin ? Une question ?</h1>
+        <p class="max-md:text-sm text-zinc-800 pb-4 text-center">
+          Ou contactez-nous simplement à l'adresse <a href="mailto:contact@atelierdeju.fr"
+            class="text-brown2 hover:underline">contact@atelierdeju.fr</a>
+        </p>
+
+        <div class=" max-w-96 w-full px-4" id="bordure">
+          <label for="nom" class="font-medium">Nom*</label>
+          <div
+            class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2 focus-within:ring-brown2 focus-within:border-none transition-all overflow-hidden">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M18.311 16.406a9.64 9.64 0 0 0-4.748-4.158 5.938 5.938 0 1 0-7.125 0 9.64 9.64 0 0 0-4.749 4.158.937.937 0 1 0 1.623.938c1.416-2.447 3.916-3.906 6.688-3.906 2.773 0 5.273 1.46 6.689 3.906a.938.938 0 0 0 1.622-.938M5.938 7.5a4.063 4.063 0 1 1 8.125 0 4.063 4.063 0 0 1-8.125 0"
+                fill="currentColor" />
+            </svg>
+            <input type="text" name="nom" class="h-full px-2 w-full outline-none bg-transparent "
+              placeholder="Votre nom" required>
+          </div>
+          <p id="error-nom" class="text-red-600 text-xs mt-1 hidden"></p>
+
+          <label for="telephone" class="font-medium">Téléphone*</label>
+          <div
+            class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2 focus-within:ring-brown2 focus-within:border-none transition-all overflow-hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 text-black transition-colors"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M3 5.25C3 4.007 4.007 3 5.25 3h2.086c.86 0 1.61.586 1.818 1.42l.73 2.92a1.875 1.875 0 0 1-1.054 2.176l-1.26.63a11.036 11.036 0 0 0 5.11 5.11l.63-1.26a1.875 1.875 0 0 1 2.176-1.054l2.92.73c.834.209 1.42.958 1.42 1.818V18c0 1.243-1.007 2.25-2.25 2.25h-.75C9.022 20.25 3 14.978 3 8.25v-3Z" />
+            </svg>
+
+            <input type="text" name="telephone" class="h-full px-2 w-full outline-none bg-transparent"
+              placeholder="Votre numéro" required>
+          </div>
+
+          <label for="email" class="font-medium mt-4">Adresse mail*</label>
+          <div
+            class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2   focus-within:ring-brown2 focus-within:border-none transition-all overflow-hidden">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M17.5 3.438h-15a.937.937 0 0 0-.937.937V15a1.563 1.563 0 0 0 1.562 1.563h13.75A1.563 1.563 0 0 0 18.438 15V4.375a.94.94 0 0 0-.938-.937m-2.41 1.874L10 9.979 4.91 5.313zM3.438 14.688v-8.18l5.928 5.434a.937.937 0 0 0 1.268 0l5.929-5.435v8.182z"
+                fill="currentColor" />
+            </svg>
+            <input type="email" name="email" class="h-full px-2 w-full outline-none bg-transparent"
+              placeholder="Votre adresse mail" required>
+          </div>
+          <div>
+            <label for="message" class="font-medium mt-4">Message*</label>
+            <textarea rows="4" id="message" name="message"
+              class="w-full mt-2 p-2 bg-transparent border border-slate-300 rounded-lg resize-none outline-none focus:ring-2  focus-within:ring-brown2 focus-within:border-none transition-all"
+              placeholder="Rédigez votre message" required></textarea>
+          </div>
 
 
-        <button type="submit" class="flex items-center justify-center gap-1 mt-5 bg-brown2/92 hover:bg-brown2 text-white py-2.5 w-full rounded-full transition-all duration-250 ease-out
+          <button type="submit" class="flex items-center justify-center gap-1 mt-5 bg-brown2/92 hover:bg-brown2 text-white py-2.5 w-full rounded-full transition-all duration-250 ease-out
          hover:-translate-y-0.75
          hover:shadow-md ">
-          Envoyez votre message
-          <svg class="mt-0.5" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="m18.038 10.663-5.625 5.625a.94.94 0 0 1-1.328-1.328l4.024-4.023H3.625a.938.938 0 0 1 0-1.875h11.484l-4.022-4.025a.94.94 0 0 1 1.328-1.328l5.625 5.625a.935.935 0 0 1-.002 1.33"
-              fill="currentColor" />
-          </svg>
-        </button>
-      </div>
-    </form>
-  </section>
+            Envoyez votre message
+            <svg class="mt-0.5" width="21" height="20" viewBox="0 0 21 20" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m18.038 10.663-5.625 5.625a.94.94 0 0 1-1.328-1.328l4.024-4.023H3.625a.938.938 0 0 1 0-1.875h11.484l-4.022-4.025a.94.94 0 0 1 1.328-1.328l5.625 5.625a.935.935 0 0 1-.002 1.33"
+                fill="currentColor" />
+            </svg>
+          </button>
+        </div>
+      </form>
+    </section>
 
-  <section id="prestations" class="pb-5 w-full bg-white"></section>
-  <section class="btnDevisGratuit w-fit mx-auto pb-10">
-    <a href="#formulaire"
-      class="group inline-flex items-center w-fit mt-3 px-3 py-1 text-base lg:text-lg text-white font-medium rounded-xl bg-brown2 overflow-hidden ">
+    <section id="prestations" class="pb-5 w-full bg-white"></section>
+    <section class="btnDevisGratuit w-fit mx-auto pb-10">
+      <a href="#formulaire"
+        class="group inline-flex items-center w-fit mt-3 px-3 py-1 text-base lg:text-lg text-white font-medium rounded-xl bg-brown2 overflow-hidden ">
 
-      <!-- Texte -->
-      <span class="transition-transform duration-500 ease-out group-hover:-translate-x-1.5 ">
-        Demandez votre devis <b>GRATUIT</b>
-      </span>
+        <!-- Texte -->
+        <span class="transition-transform duration-500 ease-out group-hover:-translate-x-1.5 ">
+          Demandez votre devis <b>GRATUIT</b>
+        </span>
 
-      <!-- Chevron -->
-      <span class="ml-0 w-0 overflow-hidden
+        <!-- Chevron -->
+        <span class="ml-0 w-0 overflow-hidden
                  transition-all duration-300 ease-out
                  group-hover:ml-1 group-hover:w-5">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z" />
-        </svg>
-      </span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z" />
+          </svg>
+        </span>
 
-    </a>
-  </section>
+      </a>
+    </section>
+    <section id="maps"></section>
+  </main>
   <section id="footer"></section>
   <script type="module" src="/src/js/contact.js"></script>
-  <script type="module" src="/node_modules/flyonui/flyonui.js"></script>
 </body>
 
 </html>

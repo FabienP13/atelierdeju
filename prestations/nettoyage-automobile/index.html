@@ -17,32 +17,46 @@
   <meta property="og:locale" content="fr_FR">
   <meta property="og:url" content="https://www.atelierdeju.fr/prestations/nettoyage-automobile/">
   <meta property="og:title" content="Nettoyage voiture sans eau — L'Atelier de Ju">
-  <meta property="og:description" content="Lavage automobile professionnel sans eau, éco-responsable et sans risque de pollution, ni pour la carrosserie. Intervention à domicile ou en atelier à Verquières et dans les Bouches-du-Rhône. Devis gratuit.">
+  <meta property="og:description"
+    content="Lavage automobile professionnel sans eau, éco-responsable et sans risque de pollution, ni pour la carrosserie. Intervention à domicile ou en atelier à Verquières et dans les Bouches-du-Rhône. Devis gratuit.">
   <meta property="og:image" content="https://www.atelierdeju.fr/images/voiture-ancienne-beige-avignon.webp">
   <meta property="og:site_name" content="L'Atelier de Ju">
   <link rel="stylesheet" href="/src/style.css" />
+  <!-- Préchargement de la police principale -->
+  <link rel="preload" href="/src/assets/fonts/exo2.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Préchargement de l'image hero (LCP) -->
+  <link rel="preload" as="image" href="/images/voiture-ancienne-beige-avignon.webp" media="(max-width: 1279px)">
+
 </head>
 
 <body>
-  <section id="header" class="">
-    <header id="navbar"></header>
-    <div
-      class="relative w-full h-70 lg:h-100  bg-[url(/images/voiture-ancienne-beige-avignon.webp)] bg-cover bg-position-[0%_77%] max-sm:bg-bottom bg-black/50 bg-blend-soft-light">
-      <div class="absolute  inset-0 flex items-center justify-center ">
-        <h1
-          class="leading-12 md:leading-15 lg:leading-20 text-white text-3xl lg:text-4xl xl:text-5xl text-shadow-lg/30 font-extrabold text-center max-w-lg lg:max-w-2xl xl:max-w-4xl">
-          Lavage automobile sans eau — Éco-responsable & Professionnel
-        </h1>
+  <main>
+    <section id="header" class="">
+      <header id="navbar"></header>
+      <div class="relative w-full h-70 lg:h-100 overflow-hidden">
+        <img src="/images/voiture-ancienne-beige-avignon.webp" sizes="100vw"
+          alt="Tableau de bord automobile — L'Atelier de Ju" fetchpriority="high" decoding="async" width="1280"
+          height="560" class="absolute inset-0 w-full h-full object-cover object-[0%_77%] max-sm:object-bottom">
+
+        <div class="absolute inset-0 bg-black/40 bg-blend-soft-light"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <h1
+            class="leading-12 md:leading-15 lg:leading-20 text-white text-3xl lg:text-4xl xl:text-5xl text-shadow-lg/30 font-extrabold text-center max-w-lg lg:max-w-2xl xl:max-w-4xl">
+            Lavage automobile sans eau — Éco-responsable & Professionnel
+          </h1>
+        </div>
       </div>
-    </div>
-  </section>
-  <section id="intro_nettoyage" class="max-w-full  text-black pt-10 xl:pt-5 2xl:pt-0"></section>
-  <section id="services" class="w-full bg-gris py-14 px-5 md:px-15 xl:px-40 mt-10"></section>
-  <section id="offres_nettoyage" class="w-full text-black px-10 pt-6 scroll-mt-25"></section>
-  <section id="realisation-nettoyage" class="mb-5"></section>
-  <section class="btnQuestion flex max-sm:flex-col max-sm:items-center justify-center mx-auto gap-4 pb-10"></section>
-  <hr class="text-gris w-[85%] mx-auto">
-  <section id="logoEntrepriseNettoyage" class=" p-10"></section>
+    </section>
+    <section id="intro_nettoyage" class="max-w-full  text-black pt-10 xl:pt-5 2xl:pt-0"></section>
+    <section id="services" class="w-full bg-gris py-14 px-5 md:px-15 xl:px-40 mt-10"></section>
+    <section id="offres_nettoyage" class="w-full text-black max-sm:px-3 sm:px-5 md:px-10 pt-6 scroll-mt-25"></section>
+    <section id="realisation-nettoyage" class="mb-5"></section>
+    <section class="btnQuestion flex max-sm:flex-col max-sm:items-center justify-center mx-auto gap-4 pb-10"></section>
+    <hr class="text-gris w-[85%] mx-auto">
+    <section id="logoEntrepriseNettoyage" class=" p-10"></section>
+    <section id="maps"></section>
+  </main>
   <section id="footer"></section>
   <script type="module" src="/src/js/nettoyage-vehicule.js"></script>
 </body>

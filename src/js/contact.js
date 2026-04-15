@@ -1,6 +1,7 @@
 import { initNavbar } from './common/navbar.js'
 import { initFooter } from './common/footer.js'
 import { initPrestations } from './common/prestations.js'
+import { InitLocalisation } from './common/localisation.js'
 
 const formulaire = document.querySelector("form#contact")
 const inputNom = formulaire.querySelector('input[name="nom"]');
@@ -22,6 +23,7 @@ h6_alert_success.textContent = ''
 await initNavbar()
 await initFooter()
 await initPrestations()
+await InitLocalisation()
 
 const formTimeInput = formulaire.querySelector('#form_time');
 formTimeInput.value = Math.floor(Date.now() / 1000);
@@ -48,19 +50,19 @@ formulaire.addEventListener('submit', async (e) => {
 
 
     try {
-        const response = await fetch('http://localhost:8000/backend/contact.php', {
+        const response = await fetch('/backend/contact.php', {
             method: 'POST',
             body: formData,
         });
 
         const data = await response.json();
-        console.log(data)
+        
         if (data.success) {
             //TODO : faire remonter la page en haut (pour voir l'alerte)
             scrollToElement(divAlertSuccess);
             divAlertSuccess.classList.remove('hidden')
             h6_alert_success.textContent = 'Message envoyé ✅';
-            form.reset();
+            formulaire.reset();
         } else {
             divAlert.classList.remove('hidden')
             h6_alert.textContent = 'Erreur : ' + data.error;

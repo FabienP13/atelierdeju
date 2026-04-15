@@ -5,6 +5,7 @@ import { loadComponent } from '/src/js/common/components.js'
 import { InitBoutonQuestion } from './common/boutonQuestion.js'
 import { InitServicesNettoyage } from './common/services.js'
 import { InitJSOnglet } from './common/offres-nettoyage.js';
+import { InitLocalisation } from './common/localisation.js'
 
 
 await initNavbar()
@@ -15,6 +16,7 @@ await InitRealisationsNettoyage()
 await initFooter()
 await InitBoutonQuestion()
 await InitLogoEntrepriseNettoyage()
+await InitLocalisation()
 
 
 export async function InitIntroductionNettoyage() {

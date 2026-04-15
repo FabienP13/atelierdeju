@@ -10,6 +10,7 @@ import { InitIntroCarrosserie } from './intro-renovation-carrosserie.js'
 import { InitIntroNettoyage } from './intro-nettoyage-vehicule.js'
 import { InitServicesNettoyage } from './common/services.js'
 import { initDiffSlider } from './common/diffSlider.js'
+import { InitLocalisation } from './common/localisation.js'
 
 await initNavbar()
 await initFooter()
@@ -22,3 +23,4 @@ await InitIntroNettoyage()
 await InitBoutonDevisSavoirPlus()
 await InitBoutons()
 initDiffSlider()
+await InitLocalisation()

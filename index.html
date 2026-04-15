@@ -9,7 +9,7 @@
   <title>L'Atelier de Ju — Rénovation cuir & carrosserie | Verquières, Vaucluse</title>
   <meta name="description"
     content="Artisan spécialiste en rénovation cuir, polish carrosserie et nettoyage automobile sans eau. Intervention à domicile ou en atelier à Verquières et dans le Vaucluse. Certifié Colourlock. Devis gratuit.">
-  <meta name="robots" content="noindex,nofollow">
+  <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://www.atelierdeju.fr/">
 
   <!-- Open Graph -->
@@ -23,6 +23,13 @@
   <meta property="og:site_name" content="L'Atelier de Ju">
 
   <link rel="stylesheet" href="src/style.css" />
+  <!-- Préchargement de la police principale -->
+  <link rel="preload" href="/src/assets/fonts/exo2.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Préchargement de l'image hero (LCP) -->
+  <link rel="preload" as="image" href="/images/tableau-de-bord-reduit-avignon.webp" media="(max-width: 1279px)">
+  <link rel="preload" as="image" href="/images/tableau-de-bord-reduit-avignon-vaucluse.webp"
+    media="(min-width: 1280px)">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -112,35 +119,41 @@
 </head>
 
 <body>
+  <main>
+    <section id="header" class="">
+      <header id="navbar" class="bg-transparent"></header>
+      <div class="relative w-full h-70 lg:h-95 xl:h-128 overflow-hidden">
+        <img src="/images/tableau-de-bord-reduit-avignon.webp"
+          srcset="/images/tableau-de-bord-reduit-avignon.webp 1279w, /images/tableau-de-bord-reduit-avignon-vaucluse.webp 1920w"
+          sizes="100vw" alt="Tableau de bord automobile — L'Atelier de Ju" fetchpriority="high" decoding="async"
+          width="1280" height="560" class="absolute inset-0 w-full h-full object-cover object-top">
 
-  <section id="header" class="">
-    <header id="navbar" class="bg-transparent"></header>
-    <div
-      class="relative w-full h-70 lg:h-95 xl:h-128 bg-[url(/images/tableau-de-bord-reduit-avignon.webp)] xl:bg-[url(/images/tableau-de-bord-reduit-avignon-vaucluse.webp)] bg-cover bg-top bg-black/40  bg-blend-soft-light">
-      <div class="absolute  inset-0 flex items-center justify-center ">
-        <h1
-          class="leading-10 lg:leading-15 xl:leading-20 text-white text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-shadow-lg/30 font-extrabold text-center max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-4xl">
-          Expert en rénovation des cuirs et préparation esthétique automobile — Bouches-du-Rhône, Vaucluse
-        </h1>
+        <div class="absolute inset-0 bg-black/40 mix-blend-soft-light"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <h1
+            class="leading-10 lg:leading-15 xl:leading-20 text-white text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-shadow-lg/30 font-extrabold text-center max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-4xl">
+            Expert en rénovation des cuirs et préparation esthétique automobile — Bouches-du-Rhône, Vaucluse, Gard
+          </h1>
+        </div>
       </div>
-    </div>
 
 
-  </section>
+    </section>
 
-  <section id="prestations" class="w-full bg-white scroll-mt-36 mt-10"></section>
-  <section id="services" class="w-full bg-gris py-14 px-5 md:px-15 xl:px-40 mt-10"></section>
-  <section id="realisations" class="pt-5 mb-10"></section>
-  <section class="boutons w-full flex gap-4 justify-center mb-10"></section>
-  <section id="intro-renovation-cuir" class="w-full bg-gris pt-1"> </section>
-  <section id="intro-renovation-carrosserie" class="w-full bg-white pt-1"> </section>
-  <section id="intro-nettoyage-vehicule" class="w-full bg-gris pt-1"> </section>
-  <section class="boutons w-full mt-10 flex gap-4 justify-center mb-10"></section>
-
+    <section id="prestations" class="w-full bg-white scroll-mt-36 mt-10"></section>
+    <section id="services" class="w-full bg-gris py-14 px-5 md:px-15 xl:px-40 mt-10"></section>
+    <section id="realisations" class="pt-5 mb-10"></section>
+    <section class="boutons w-full flex gap-4 justify-center mb-10"></section>
+    <section id="intro-renovation-cuir" class="w-full bg-gris pt-1"> </section>
+    <section id="intro-renovation-carrosserie" class="w-full bg-white pt-1"> </section>
+    <section id="intro-nettoyage-vehicule" class="w-full bg-gris pt-1"> </section>
+    <section class="boutons w-full mt-10 flex gap-4 justify-center mb-10"></section>
+    <section id="maps" class="w-full"></section>
+  </main>
   <section id="footer"></section>
   <script type="module" src="/src/js/home.js"></script>
-  <script type="module" src="/node_modules/flyonui/flyonui.js"></script>
-  
+  <!--<script type="module" src="/node_modules/flyonui/flyonui.js"></script> -->
+
 </body>
 
 </html>

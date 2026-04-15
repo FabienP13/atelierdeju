@@ -3,10 +3,8 @@ import { Observer } from 'tailwindcss-intersect';
 
 import { loadComponent } from '/src/js/common/components.js'
 
-export async function initLogoColourlock() {
-    await loadComponent('#logoColourlock', '/components/logoColourlock.html')
+export async function InitLocalisation() {
+    await loadComponent('#maps', '/components/localisation.html')
     
     Observer.start();   
-
-    
 }

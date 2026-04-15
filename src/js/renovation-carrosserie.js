@@ -4,6 +4,7 @@ import { Observer } from 'tailwindcss-intersect';
 import { loadComponent } from '/src/js/common/components.js'
 import { InitBoutonDevisGratuit } from './common/boutonDevisGratuit.js'
 import { initDiffSlider } from './common/diffSlider.js'
+import { InitLocalisation } from './common/localisation.js'
 
 await initNavbar()
 await initFooter()
@@ -12,6 +13,7 @@ await InitOffresCarresserie()
 await InitRealisationCarrosserie()
 await InitBoutonDevisGratuit()
 initDiffSlider()
+await InitLocalisation()
 
 export async function InitIntroductionCarresserie() {
     await loadComponent('#intro_carrosserie', '/components/introduction-renovation-carrosserie.html')

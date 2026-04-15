@@ -4,6 +4,7 @@ import { Observer } from 'tailwindcss-intersect';
 import { loadComponent } from '/src/js/common/components.js'
 import { InitBoutonDevisGratuit } from './common/boutonDevisGratuit.js'
 import { initDiffSlider } from './common/diffSlider.js'
+import { InitLocalisation } from './common/localisation.js'
 
 Observer.start(); 
 
@@ -15,6 +16,7 @@ await InitPourquoiAtelierDeJu()
 await InitBoutonDevisGratuit()
 await InitLogoEntrepriseCuir()
 initDiffSlider()
+await InitLocalisation()
 
 export async function InitRealisationCuir() {
     await loadComponent('#realisation-cuir', '/components/realisations-cuir.html')

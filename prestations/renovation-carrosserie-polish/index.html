@@ -7,21 +7,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- SEO de base -->
   <title>Rénovation carrosserie — Polish | L'Atelier de Ju, Vaucluse</title>
-  <meta name="description" content="Polish professionnel, correction de vernis et application de protections haut de gamme pour révéler l'éclat de votre carrosserie. Artisan à Verquières (84), intervention à domicile et en atelier. Devis gratuit.">
+  <meta name="description"
+    content="Polish professionnel, correction de vernis et application de protections haut de gamme pour révéler l'éclat de votre carrosserie. Artisan à Verquières (84), intervention à domicile et en atelier. Devis gratuit.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.atelierdeju.fr/prestations/renovation-carrosserie-polish/">
- 
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:url" content="https://www.atelierdeju.fr/prestations/renovation-carrosserie-polish/">
   <meta property="og:title" content="Rénovation carrosserie — Polish | L'Atelier de Ju">
-  <meta property="og:description" content="Polish professionnel, correction de vernis et application de protections haut de gamme pour révéler l'éclat de votre carrosserie. Artisan à Verquières (84), intervention à domicile et en atelier. Résultats garantis.">
+  <meta property="og:description"
+    content="Polish professionnel, correction de vernis et application de protections haut de gamme pour révéler l'éclat de votre carrosserie. Artisan à Verquières (84), intervention à domicile et en atelier. Résultats garantis.">
   <meta property="og:image" content="https://www.atelierdeju.fr/images/mercedes-front-vaucluse.webp">
   <meta property="og:site_name" content="L'Atelier de Ju">
 
 
   <link rel="stylesheet" href="/src/style.css" />
+  <!-- Préchargement de la police principale -->
+  <link rel="preload" href="/src/assets/fonts/exo2.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Préchargement de l'image hero (LCP) -->
+  <link rel="preload" as="image" href="/images/mercedes-front-vaucluse.webp" media="(max-width: 1279px)">
+
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -38,23 +46,30 @@
 </head>
 
 <body>
-  <section id="header" class="">
-    <header id="navbar"></header>
-    <div
-      class="relative w-full h-70 lg:h-100  bg-[url(/images/mercedes-front-vaucluse.webp)] bg-cover bg-position-[35%_62%] max-sm:bg-center bg-black/30 bg-blend-soft-light">
-      <div class="absolute  inset-0 flex items-center justify-center ">
-        <h1
-          class="leading-12 md:leading-15 lg:leading-20 text-white text-3xl lg:text-4xl xl:text-5xl text-shadow-lg/30 font-extrabold text-center max-w-lg lg:max-w-2xl xl:max-w-4xl">
-          Rénovation carrosserie – L’excellence au service de votre véhicule
-        </h1>
-      </div>
-    </div>
-  </section>
+  <main>
+    <section id="header" class="">
+      <header id="navbar"></header>
+      <div class="relative w-full h-70 lg:h-100 overflow-hidden">
+        <img src="/images/mercedes-front-vaucluse.webp" sizes="100vw" alt="Tableau de bord automobile — L'Atelier de Ju"
+          fetchpriority="high" decoding="async" width="1280" height="560"
+          class="absolute inset-0 w-full h-full object-cover object-[35%_62%] max-sm:object-center">
 
-  <section id="intro_carrosserie" class="max-w-full  text-black pt-10 xl:pt-5 2xl:pt-0"></section>
-  <section id="offres_carrosserie" class="w-full text-black px-10 pt-6 pb-10"></section>
-  <section id="realisation-carrosserie" class="pt-5 mb-5"></section>
-  <section class="btnDevisGratuit w-fit mx-auto pb-10"></section>
+        <div class="absolute inset-0 bg-black/40 bg-blend-soft-light"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <h1
+            class="leading-12 md:leading-15 lg:leading-20 text-white text-3xl lg:text-4xl xl:text-5xl text-shadow-lg/30 font-extrabold text-center max-w-lg lg:max-w-2xl xl:max-w-4xl">
+            Rénovation carrosserie – L’excellence au service de votre véhicule
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <section id="intro_carrosserie" class="max-w-full  text-black pt-10 xl:pt-5 2xl:pt-0"></section>
+    <section id="offres_carrosserie" class="w-full text-black px-10 pt-6 pb-10"></section>
+    <section id="realisation-carrosserie" class="pt-5 mb-5"></section>
+    <section class="btnDevisGratuit w-fit mx-auto pb-10"></section>
+    <section id="maps"></section>
+  </main>
   <section id="footer"></section>
   <script type="module" src="/src/js/renovation-carrosserie.js"></script>
 </body>

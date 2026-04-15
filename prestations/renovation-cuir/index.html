@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="/src/style.css" />
   <!-- SEO de base -->
   <title>Rénovation cuir auto — Teinte, nettoyage & réparation | L'Atelier de Ju, Verquières</title>
-  <meta name="description" content="Redonnez vie aux sièges et pièces en cuir. Teinte, nettoyage profond, réparation de déchirures. Artisan certifié Colourlock à Verquières (84). Devis gratuit.">
+  <meta name="description"
+    content="Redonnez vie aux sièges et pièces en cuir. Teinte, nettoyage profond, réparation de déchirures. Artisan certifié Colourlock à Verquières (84). Devis gratuit.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.atelierdeju.fr/prestations/renovation-cuir/">
   <!-- Open Graph -->
@@ -16,11 +17,18 @@
   <meta property="og:locale" content="fr_FR">
   <meta property="og:url" content="https://www.atelierdeju.fr/prestations/renovation-cuir/">
   <meta property="og:title" content="Rénovation cuir auto — L'Atelier de Ju">
-  <meta property="og:description" content="Teinte, nettoyage et réparation de cuir par un artisan certifié Colourlock à Verquières. Intervention à domicile ou en atelier.">
+  <meta property="og:description"
+    content="Teinte, nettoyage et réparation de cuir par un artisan certifié Colourlock à Verquières. Intervention à domicile ou en atelier.">
   <meta property="og:image" content="https://www.atelierdeju.fr/images/ensemble-cuir-bouches-du-rhone.webp">
   <meta property="og:site_name" content="L'Atelier de Ju">
 
-    <script type="application/ld+json">
+  <!-- Préchargement de la police principale -->
+  <link rel="preload" href="/src/assets/fonts/exo2.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Préchargement de l'image hero (LCP) -->
+  <link rel="preload" as="image" href="/images/ensemble-cuir-bouches-du-rhone.webp" media="(max-width: 1279px)">
+
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "VideoObject",
@@ -36,13 +44,17 @@
 </head>
 
 <body>
-  <section id="header">
-    <header id="navbar"></header>
+  <main>
+    <section id="header">
+      <header id="navbar"></header>
     </section>
-    <div
-      class="relative w-full h-60 lg:h-65 xl:h-90 bg-[url(/images/ensemble-cuir-bouches-du-rhone.webp)] bg-cover bg-center bg-black/30  bg-blend-soft-light">
-      <!-- <img loading="lazy" src="/images/tableau-de-bord-reduit-vaucluse.webp" alt="" class="w-full h-full object-cover object-center" /> -->
-      <div class="absolute  inset-0 flex items-center justify-center ">
+    <div class="relative w-full h-60 lg:h-65 xl:h-90 overflow-hidden">
+      <img src="/images/ensemble-cuir-bouches-du-rhone.webp" sizes="100vw"
+        alt="Tableau de bord automobile — L'Atelier de Ju" fetchpriority="high" decoding="async" width="1280"
+        height="560" class="absolute inset-0 w-full h-full object-cover object-center">
+
+      <div class="absolute inset-0 bg-black/35 bg-blend-soft-light"></div>
+      <div class="absolute inset-0 flex items-center justify-center">
         <h1
           class="leading-10 lg:leading-15 xl:leading-20 text-white text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-shadow-lg/30 font-extrabold text-center max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-4xl">
           Rénovation Cuir - Redonnez vie à vos cuirs, révélez leur élégance d’origine
@@ -51,12 +63,14 @@
     </div>
 
 
-  <section id="intro_cuir" class="max-w-full  text-black "></section>
-  <section id="pourquoi-atelier-de-ju" class="bg-gris pt-1 pb-8"></section>
-  <section id="realisation-cuir" class="pt-5 mb-5"></section>
-  <section class="btnDevisGratuit w-fit mx-auto pb-10"></section>
-  <hr class="text-gris w-[85%] mx-auto">
-  <section id="logoEntrepriseCuir" class=" p-10"></section>
+    <section id="intro_cuir" class="max-w-full  text-black "></section>
+    <section id="pourquoi-atelier-de-ju" class="bg-gris pt-1 pb-8"></section>
+    <section id="realisation-cuir" class="pt-5 mb-5"></section>
+    <section class="btnDevisGratuit w-fit mx-auto pb-10"></section>
+    <hr class="text-gris w-[85%] mx-auto">
+    <section id="logoEntrepriseCuir" class=" p-10"></section>
+    <section id="maps"></section>
+  </main>
   <section id="footer" class="text-black"></section>
   <script type="module" src="/src/js/renovation-cuir.js"></script>
 </body>
